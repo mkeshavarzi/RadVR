@@ -1,0 +1,2 @@
+rvu -vtv -vp 0 0 0.01 -vd 0 0 1 -vu 1 0 0 -vh 90 -vv 90 -vs 0 -vl 0
+#rvu -vtc -vp 0 0 0.01 -vd 1 0 0 -vu 0 0 1 -vh 360 -vv 90 -vs 0 -vl 0.5

@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 55d7c061b1be2044994135915f9afaae
+timeCreated: 1524458093
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ceiling
+    100002: Delete_slats
+    100004: Ext_Wall
+    100006: Floor_Exterior
+    100008: Floor_Interior
+    100010: Glaze___Clear
+    100012: Glaze___Diffuse
+    100014: Ground
+    100016: //RootNode
+    100018: Int_Wall
+    100020: Pool
+    100022: Slat
+    100024: White___reflector
+    400000: Ceiling
+    400002: Delete_slats
+    400004: Ext_Wall
+    400006: Floor_Exterior
+    400008: Floor_Interior
+    400010: Glaze___Clear
+    400012: Glaze___Diffuse
+    400014: Ground
+    400016: //RootNode
+    400018: Int_Wall
+    400020: Pool
+    400022: Slat
+    400024: White___reflector
+    2100000: CeilingMat
+    2100002: Delete_slatsMat
+    2100004: Ext_WallMat
+    2100006: Floor_ExteriorMat
+    2100008: Floor_InteriorMat
+    2100010: Glaze___ClearMat
+    2100012: Glaze___DiffuseMat
+    2100014: GroundMat
+    2100016: Int_WallMat
+    2100018: PoolMat
+    2100020: SlatMat
+    2100022: White___reflectorMat
+    2300000: Ceiling
+    2300002: Delete_slats
+    2300004: Ext_Wall
+    2300006: Floor_Exterior
+    2300008: Floor_Interior
+    2300010: Glaze___Clear
+    2300012: Glaze___Diffuse
+    2300014: Ground
+    2300016: Int_Wall
+    2300018: Pool
+    2300020: Slat
+    2300022: White___reflector
+    3300000: Ceiling
+    3300002: Delete_slats
+    3300004: Ext_Wall
+    3300006: Floor_Exterior
+    3300008: Floor_Interior
+    3300010: Glaze___Clear
+    3300012: Glaze___Diffuse
+    3300014: Ground
+    3300016: Int_Wall
+    3300018: Pool
+    3300020: Slat
+    3300022: White___reflector
+    4300000: Ceiling
+    4300002: Delete_slats
+    4300004: Ext_Wall
+    4300006: Floor_Exterior
+    4300008: Floor_Interior
+    4300010: Glaze___Clear
+    4300012: Glaze___Diffuse
+    4300014: Ground
+    4300016: Int_Wall
+    4300018: Pool
+    4300020: Slat
+    4300022: White___reflector
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

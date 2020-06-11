@@ -1,0 +1,90 @@
+#GENERATING SKIES
+
+#If using a pair of direct-normal and diffuse-horizontal irradiance that exist in a weather file. You should write a *.rad with the gendaylit command (starting with an "!") followed by a fixed description set of shaders for the sky. The gendaylit command should be followed from a xform command in order to mirror the dome and orient as if y-positive is North (the coordinates become messed up since is a camera looking up). Save the text file as sky.rad
+#In gendaylit -a is the latitude, -o the longitude, -m the meridian degrees west to greenwich, and -W the pair of direct-normal and diffuse-horizontal irradiance.
+#To tweak with the color of the sky please tweak with the RGB parameters on the last line of 'skyfunc glow skyglow'.
+#To tweak with the color of the ground please tweal with the RGB values on the last line of 'skyfunc glow ground_glow'. I just applied the sky color but reducing to 10%.
+#Example:
+	!gendaylit 6.0 22.0 11.0 -a 37.62 -o 122.4 -m 120 -W 904.0 113.0 | xform -mx
+	skyfunc glow skyglow
+	0 
+	0 
+	4 
+	.99 .99 1.1 0
+
+	skyglow source sky 
+	0 
+	0 
+	4 
+	0 0 1 180
+
+	skyfunc glow ground_glow
+	0
+	0
+	4
+	0.099 0.099 0.11 0
+
+	ground_glow source ground
+	0
+	0
+	4
+	0 0 -1 180
+
+
+#If it is a CIE clear sky. You should write a *.rad with the gensky command (starting with an "!") followed by a fixed description set of shaders for the sky. The gensky command should be followed from a xform command in order to mirror the dome and orient as if y-positive is North (the coordinates become messed up since is a camera looking up). Save the text file as sky.rad
+#To tweak with the color of the sky please tweak with the RGB parameters on the last line of 'skyfunc glow skyglow'.
+#To tweak with the color of the ground please tweal with the RGB values on the last line of 'skyfunc glow ground_glow'. 
+#Example a clear sky for Oakland:
+
+	!gensky 09 21 09 +s -a 38 -o 122 -m 120 | xform -mx
+	skyfunc glow skyglow
+	0 
+	0 
+	4 
+	.99 .99 1.1 0
+
+	skyglow source sky 
+	0 
+	0 
+	4 
+	0 0 1 180
+
+	skyfunc glow ground_glow
+	0
+	0
+	4
+	0.099 0.099 0.11 0
+
+	ground_glow source ground
+	0
+	0
+	4
+	0 0 -1 180
+
+#If it is a CIE overcast sky just use the sky file that was send.
+
+#GENERATING A OCTREE
+
+#Use oconv to generate a octree that only contains the sky since we just want to render the sky.
+#Example:
+
+	oconv sky.rad > sky_scene.oct
+
+#GENERATING THE HDR
+#Use rpict and the view file that was send to render the HDR of the sky.
+#USE THE VIEW FILE THAT IS SENT WITH THIS EMAIL.
+#Example (if running on the Command Line of Windows)
+
+	rpict -t 15 -vf sky_viewCubeBox.vf -af sky_view.amb -x 1400 -y 1400 -ps 4 -pt .10 -pj .9 -dj .5 -ds .25 -dt .25 -dc .5 -dr 1 -dp 256 -st .5 -ab 4 -aa .2 -ar 256 -ad 2048 -as 1024 -lr 6 -lw .01 sky_scene.oct > sky_view.overture
+	del sky_view.overture
+	@ECHO+
+	@ECHO Running final image calculation no.1 of 1.
+	rpict -t 15 -vf sky_viewCubeBox.vf -af sky_view.amb -x 1400 -y 1400  -ps 4 -pt .10 -pj .9 -dj .5 -ds .25 -dt .25 -dc .5 -dr 1 -dp 256 -st .5 -ab 4 -aa .2 -ar 256 -ad 2048 -as 1024 -lr 6 -lw .01 sky_scene.oct > sky_view.unf
+	pfilt -r .6 -x /2 -y /2 sky_view.unf > sky_view.hdr
+	del sky_view.unf
+	ra_tiff -z sky_view.hdr sky_view.tiff
+
+#GENERATING A TIFF (just to visualize)
+#Example:
+
+	ra_tiff -z sky_view.hdr sky_view.tiff
